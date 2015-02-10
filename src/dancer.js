@@ -34,10 +34,10 @@ var makeDancer = function(top, left, timeBetweenSteps){
 
 
 
-makeDancer.prototype.step = function(){
+makeDancer.prototype.step = function(floor, position){
   var context = this;
   var time = this.timeBetweenSteps;
-  setTimeout(function(){ context.step(); }, time);
+  setTimeout(function(){ context.step(floor, position); }, time);
   //setTimeout(bind(makeDancer.prototype.step, context), time);
 
 };
