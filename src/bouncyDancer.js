@@ -7,13 +7,15 @@ makeBouncyDancer.prototype.constructor = makeBouncyDancer;
 
 makeBouncyDancer.prototype.step = function(floor, position){
   //this.$node.top = $("body").height() * Math.random();
-  var floor = floor || $("body").height() * Math.random();
+  var floor = floor || this.top;
   var position = position || floor;
   if (position === floor){
     position = floor - (Math.floor(Math.random() + 150));
+    this.$node.css({"border-radius": "10px"});
   }
   else{
     position = floor;
+    this.$node.css({"border-radius": "0px"});
   }
   makeDancer.prototype.step.call(this, floor, position);
   //makeDancer.prototype.step.call(this, floor, value);
@@ -24,6 +26,7 @@ makeBouncyDancer.prototype.step = function(floor, position){
   //   value = '100px'
   // }
   this.$node.animate({top: position + "px"});
+
 
   console.log(this.$node.offsetTop);
 };
