@@ -52,3 +52,13 @@ makeDancer.prototype.setPosition = function(top, left){
 };
 
 
+
+
+
+
+
+
+
+
+
+

@@ -7,9 +7,10 @@ makePopDancer.prototype.constructor = makePopDancer;
 
 makePopDancer.prototype.step = function(){
   makeDancer.prototype.step.call(this);
-  var newArray = ['red', 'green', 'blue', 'yellow', 'purple']
+  var newArray = ['red', 'green', 'blue', 'yellow', 'purple'];
 
   var count = Math.floor(Math.random()*newArray.length+1);
   var value = '10px solid ' + newArray[count];
-  this.$node.css({border: value});
+  this.$node.css({border: value, 'border-radius': '0px', 'animation-name': 'rotate(20deg)'});
+  this.$node.addClass('rotatingDancer');
 };

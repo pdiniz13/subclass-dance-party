@@ -9,4 +9,5 @@ makeRickAstley.prototype.step = function(){
   makePopDancer.prototype.step.call(this);
   var value = $("body").width() * Math.random() + 'px'
   this.$node.animate({left: value});
+
 };
