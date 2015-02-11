@@ -38,7 +38,11 @@ $(document).ready(function(){
 
       var $children = $('body').find('.dancer');
       $.each($children, function(){
-        $(this).css({'left':'40px'})
+        console.log($(this));
+        $(this).finish();
+        $(this).css({'left':'40px'});
+
+
       });
   });
 
@@ -66,26 +70,21 @@ $(document).ready(function(){
           window.dancers[closest].setPosition(value.top, left);
           $('body').append(window.dancers[closest].$node);
           var placeholder = window.dancers.splice(closest, 1)[0];
-          console.log(placeholder, 'value1');
           windowArray.push(placeholder);
       }
       $('body').append(value.$node);
-      console.log(value, "value2");
       windowArray.push(value);
-      console.log(value);
 
       closest = 0;
       closestVal = 20000;
     }
 
-      console.log(windowArray, 'window after while');
       window.dancers = windowArray;
     };
     pairUp();
   });
 
   $('body').on('mouseenter', '.dancer', function(){
-    console.log('reacting')
     $('body').css({'background-image':'url("pic/rick-astley-80s-hairstyle.jpg")'});
   });
 

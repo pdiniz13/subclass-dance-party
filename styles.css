@@ -33,6 +33,7 @@ body, a:link, a:visited, a:active{
     -webkit-animation-timing-function: linear;
     animation-timing-function: linear;
     animation-delay: 0s;
+    border-radius: 0px;
 }
 
 @-webkit-keyframes myfirst {
@@ -44,4 +45,11 @@ body, a:link, a:visited, a:active{
 @keyframes myfirst {
     0%   {-webkit-transform: rotate(0deg);}
     100%  {-webkit-transform: rotate(360deg);}
+}
+
+#rick{
+    border-width: 0px;
+    height: 50px;
+    width: 50px;
+    background-image : url("pic/rick_roll_d.png");
 }

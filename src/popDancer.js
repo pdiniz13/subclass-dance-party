@@ -11,6 +11,6 @@ makePopDancer.prototype.step = function(){
 
   var count = Math.floor(Math.random()*newArray.length+1);
   var value = '10px solid ' + newArray[count];
-  this.$node.css({border: value, 'border-radius': '0px', 'animation-name': 'rotate(20deg)'});
+  this.$node.css({border: value});
   this.$node.addClass('rotatingDancer');
 };
