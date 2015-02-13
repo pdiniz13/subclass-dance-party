@@ -23,13 +23,23 @@ $(document).ready(function(){
     // make a dancer with a random position
 
     var dancer = new dancerMakerFunction(
-      $("body").height() * Math.random(),
-      $("body").width() * Math.random(),
+      $("body").height() * Math.random()*0.8,
+      $("body").width() * Math.random()*0.8,
       Math.random() * 1000
     );
     $('body').append(dancer.$node);
+    //console.log(protos(dancer));
     window.dancers.push(dancer);
-    $('.song').get(0).play();
+    console.log(dancer.$node.attr('id'));
+    if (dancer.$node.attr('id') === "roll" || dancer.$node.attr('id') === undefined){
+      $('.song').get(0).play();
+      $("body").css({"background-image": 'url("pic/rick-astley-80s-hairstyle.jpg")'});
+    }
+    if (dancer.$node.attr('id') === "gangnam" || dancer.$node.attr('id') === "zhang"){
+      $('.song2').get(0).play();
+      $("body").css({"background-image": 'url("pic/how-to-draw-psy-gangnam-style_1_000000013411_5.png")'});
+    }
+
   });
 
   $(".lineUpButton").on("click", function(event){
@@ -84,17 +94,22 @@ $(document).ready(function(){
     pairUp();
   });
 
-  $('body').on('mouseenter', '.dancer', function(){
-    $('body').css({'background-image':'url("pic/rick-astley-80s-hairstyle.jpg")'});
-  });
-
-$('body').on('mouseleave', '.dancer', function(){
-    $('body').css({'background-image':'none'})
-  });
-
 });
 
 
+function protos(obj) {
+  var result = [];
+  function diver(obj){
+    if(obj.__proto__){
+      result.push(obj.__proto__);
+    } else {
+      return false;
+    }
+    diver(obj.__proto__);
+  }
+  diver(obj);
+  return result;
+}
 
 
 

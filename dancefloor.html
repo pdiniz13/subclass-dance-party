@@ -3,27 +3,44 @@
   <head>
     <title>Object Dance Party</title>
     <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-theme.min.css" rel="stylesheet">
     <script src="lib/jquery.js"></script>
     <script src="src/dancer.js"></script>
     <script src="src/blinkyDancer.js"></script>
     <script src="src/bouncyDancer.js"></script>
     <script src="src/popDancer.js"></script>
     <script src="src/rickAstley.js"></script>
+    <script src="src/makeMovingDancer.js"></script>
+    <script src="src/makeKho.js"></script>
+    <script src="src/makeDavid.js"></script>
+    <script src="src/makeNic.js"></script>
   </head>
   <body>
-    <div class="topbar">
-      <span class="title">object dance party</span>
-      <a href="#" class="addDancerButton" data-dancer-maker-function-name="makeBlinkyDancer">add a blinky dancer</a>
-      <a href="#" class="addDancerButton" data-dancer-maker-function-name="makeBouncyDancer">add a bouncy dancer</a>
-      <a href="#" class="addDancerButton" data-dancer-maker-function-name="makePopDancer">add a pop dancer</a>
-      <a href="#" class="addDancerButton" data-dancer-maker-function-name="makeRickAstley">add a Rick Astley</a>
-      <a href="#" class="lineUpButton" data-lineUp-function-name="lineUp">Line Up Dancers</a>
-      <a href="#" class="pairUpButton" data-pairUp-function-name="pairUp">Pair Up Dancers</a>
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+      </div>
+        <div id="navbar" class="navbar-collapse collapse">
+
+
+      <button type="button" class="btn btn-primary addDancerButton" data-dancer-maker-function-name="makeBouncyDancer">Zhangam Style!!!</button>
+      <button type="button" class="btn btn-primary addDancerButton" data-dancer-maker-function-name="makeBasicMovingDancer">Make Shawn Dance</button>
+      <button type="button" class="btn btn-primary addDancerButton" data-dancer-maker-function-name="makeKo">Make Ko Dance</button>
+            <button type="button" class="btn btn-primary addDancerButton" data-dancer-maker-function-name="makeDavid">Make David Dance</button>
+            <button type="button" class="btn btn-primary addDancerButton" data-dancer-maker-function-name="makeNic">Make Nic Dance</button>
+      </div><!--/.nav-collapse -->
     </div>
-    <audio class='song'>
+  </nav>
+
+    <audio class='song' controls="controls">
       <source src="mp3/rickroll.mp3" type="audio/mpeg">
       This browser is not awesome enough.
     </audio>
+  <audio class='song2' controls="controls">
+      <source src="mp3/GangnamStyle.mp3" type="audio/mpeg">
+      This browser is not awesome enough.
+  </audio>
     <script src="src/init.js"></script>
   </body>
 </html>

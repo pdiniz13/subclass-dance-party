@@ -3,7 +3,6 @@ body, html{
 }
 body{
   margin: 0px;
-  background-color:#444;
   font-size: 18px;
 }
 body, a:link, a:visited, a:active{
@@ -21,9 +20,19 @@ body, a:link, a:visited, a:active{
   background-color: #777;
 }
 .dancer{
-  border:10px solid red;
-  border-radius:10px;
+  /*border:10px solid red;*/
+  /*border-radius:10px;*/
   position:absolute;
+}
+
+#zhang{
+    -webkit-animation: zhangamstyle 0.5s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-delay: 0s;
+    background-image: url("pic/zhang.png");
+    height: 174px;
+    width: 90px;
 }
 .rotatingDancer {
     -webkit-animation: myfirst 2.5s;
@@ -52,4 +61,467 @@ body, a:link, a:visited, a:active{
     height: 50px;
     width: 50px;
     background-image : url("pic/rick_roll_d.png");
+}
+
+body, html{
+    height:100%;
+}
+body{
+    margin: 0px;
+    font-size: 18px;
+}
+body, a:link, a:visited, a:active{
+    color: lightblue;
+}
+.title, .button{
+    padding:5px 12px;
+    float:right;
+}
+.topbar{
+    height:32px;
+    background-color: #555;
+}
+.title{
+    background-color: #777;
+}
+
+
+
+
+
+/* Person generics */
+.person {
+    -webkit-animation: boogie 6s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+    margin: 2em;
+    display: inline-block;
+    width: 80px;
+    height: 110px;
+    position: relative;
+}
+.person > div {
+    background: url("") no-repeat center center;
+    border-radius: 20%;
+    /*border:1px solid blue;*/
+}
+.person .person-head {
+    width: 48px;
+    height: 60px;
+    margin: 0 auto;
+    transform-origin: 50% 100%;
+    /*border-radius: 50%;*/
+    background-image: url('pic/newShawn.png');
+}
+.person .person-body {
+    width: 30px;
+    height: 50px;
+    background-image: url('pic/body2.png');
+    margin: 0 auto;
+    position: relative;
+    z-index: 200;
+}
+.person .person-arm {
+    width: 12px;
+    height: 40px;
+    position: absolute;
+    top: 60%;
+}
+.person .person-arm.person-arm-l {
+    -webkit-animation: clapLeft 2.5s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    background-image: url('pic/larm2.png');
+    left: 12%;
+    transform-origin: 60% 12%;
+}
+.person .person-arm.person-arm-r {
+    -webkit-animation: clapRight 2.5s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    background-image: url('pic/rarm2.png');
+    right: 12%;
+    transform-origin: 40% 12%;
+}
+.person .person-leg {
+    width: 27px;
+    height: 65px;
+    position: absolute;
+    top: 100%;
+}
+.person .person-leg.person-leg-l {
+    -webkit-animation: boogieLeftLeg 2.5s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    border-radius: 0px;
+    left: 15%;
+    background-image: url('pic/newlleg.png');
+    transform-origin: 40% 12%;
+}
+.person .person-leg.person-leg-r {
+    -webkit-animation: boogieRightLeg 2.5s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    background-image: url('pic/newrleg.png');
+    right: 15%;
+    transform-origin: 40% 12%;
+}
+
+.person-arm {
+    border-radius: 0px;
+}
+
+
+@-webkit-keyframes clapRight {
+    0%   {-webkit-transform: rotate(0deg);}
+    50%  {-webkit-transform: rotate(-180deg);}
+    100%  {-webkit-transform: rotate(0deg);}
+}
+
+
+@-webkit-keyframes clapLeft {
+    0%   {-webkit-transform: rotate(0deg);}
+    50%  {-webkit-transform: rotate(180deg);}
+    100%  {-webkit-transform: rotate(0deg);}
+}
+
+@-webkit-keyframes boogieRightLeg {
+    0%   {-webkit-transform: rotate(0deg);}
+    25%  {-webkit-transform: rotate(-30deg);}
+    50%  {-webkit-transform: rotate(0deg);}
+    100%  {-webkit-transform: rotate(0deg);}
+}
+
+@-webkit-keyframes boogieLeftLeg {
+    0%   {-webkit-transform: rotate(0deg);}
+    25%  {-webkit-transform: rotate(0deg);}
+    50%  {-webkit-transform: rotate(0deg);}
+    75%   {-webkit-transform: rotate(30deg);}
+    100%  {-webkit-transform: rotate(0deg);}
+}
+
+
+
+@-webkit-keyframes SNF {
+    0%   {transform: rotate(120deg);}
+
+    25% { transform: rotate(120deg); }
+
+    35% { transform: rotate(300deg); }
+
+    45% { transform: rotate(120deg); }
+
+    55% { transform: rotate(300deg); }
+
+    65% { transform: rotate(120deg); }
+
+    75% { transform: rotate(300deg); }
+
+    100%   { transform: rotate(300deg); }
+}
+
+
+/* Person generics */
+
+
+@-webkit-keyframes boogie {
+    0%   {}
+    5%   {left:0px;}
+    10%  {left:25px;}
+    20%  {left:0px;}
+    25%  {left:25px;}
+    35%  {left:-10px;}
+    45%  {left:25px;}
+    60%  {left:-5px;}
+    70%  {left:30px;}
+    80%  {left:0px;}
+    90%  {left:25px;}
+    95%  {left:0px;}
+}
+
+
+
+
+
+@-webkit-keyframes zhangamstyle {
+    0%   {-webkit-transform: rotate(-10deg);}
+    25%  {-webkit-transform: rotate(0deg);}
+    50%  {-webkit-transform: rotate(10deg);}
+    75%  {-webkit-transform: rotate(0deg);}
+    100% {-webkit-transform: rotate(-10deg);}
+}
+
+#ko {
+    width: 80px;
+    -webkit-animation: ko 10s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+}
+
+#ko .person-head {
+    background-image: url('pic/ko.png');
+    transform-origin: 50% 100%;
+
+}
+#ko .person-body {
+    width: 40px;
+    height: 60px;
+    background-image: url('pic/ko2.png');
+}
+
+#ko .person-arm.person-arm-l {
+    -webkit-animation: clockwise 5s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+    background-image: url('pic/ko.Larm.png');
+    z-index: 200;
+
+}
+
+#ko .person-arm.person-arm-r {
+    -webkit-animation: counterclockwise 5s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+    background-image: url('pic/ko.Rarm.png');
+    z-index: 200;
+}
+
+#ko .person-leg.person-leg-l {
+    left: 5%;
+    width: 30px;
+    background-image: url('pic/ko.Lleg.png');
+}
+#ko .person-leg.person-leg-r {
+    right: 5%;
+    width: 30px;
+    background-image: url('pic/ko.Rleg.png');
+}
+
+
+
+
+@-webkit-keyframes clockwise {
+    0%   {-webkit-transform: rotate(0deg);}
+    100%  {-webkit-transform: rotate(360deg);}
+}
+
+@-webkit-keyframes counterclockwise {
+    0%   {-webkit-transform: rotate(360deg);}
+    100%  {-webkit-transform: rotate(0deg);}
+}
+
+@-webkit-keyframes ko {
+    0%   {}
+    5%   {top:0px;}
+    10%  {top:25px;}
+    20%  {top:0px;}
+    25%  {top:25px;}
+    35%  {top:-40px;}
+    45%  {top:50px;}
+    55%  {top:-50px;}
+    65%  {top:50px;}
+    70%  {top:0px;}
+    80%  {top:-60px;}
+    90%  {top:40px;}
+    95%  {top:0px;}
+    50%  {-webkit-transform: rotate(0deg);}
+    75%  {-webkit-transform: rotate(360deg);}
+}
+
+#nic {
+    width: 80px;
+    -webkit-animation: myOrbit 4s linear infinite; /* Chrome, Safari 5 */
+    -moz-animation: myOrbit 4s linear infinite; /* Firefox 5-15 */
+    -o-animation: myOrbit 4s linear infinite; /* Opera 12+ */
+    animation: myOrbit 4s linear infinite;
+}
+
+#nic .person-head {
+    width: 60px;
+    height: 80px;
+    background-image: url('pic/nic.png');
+    transform-origin: 50% 100%;
+
+}
+#nic .person-body {
+    width: 40px;
+    height: 60px;
+    background-image: url('pic/formal2.png');
+}
+
+#nic .person-arm {
+    width: 10px;
+    height: 60px;
+    position: absolute;
+    top: 70%;
+}
+
+#nic .person-arm.person-arm-l {
+    background-image: url('pic/fancy.Larm2.png');
+    z-index: 200;
+}
+
+#nic .person-arm.person-arm-r {
+    background-image: url('pic/fancy.Rarm2.png');
+    z-index: 200;
+}
+
+#nic .person-leg {
+    position: absolute;
+    top: 120%;
+}
+
+#nic .person-leg.person-leg-l {
+    width: 30px;
+    background-image: url('pic/fancy.Lleg2.png');
+}
+#nic .person-leg.person-leg-r {
+    width: 30px;
+    background-image: url('pic/fancy.Rleg2.png');
+}
+
+
+
+#david {
+    width: 80px;
+    -webkit-animation: david 5s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+}
+
+#david .person-head {
+    width: 70px;
+    height: 90px;
+    background-image: url('pic/david.png');
+    transform-origin: 50% 100%;
+
+}
+#david .person-body {
+    width: 50px;
+    height: 70px;
+    background-image: url('pic/silly.body2.png');
+}
+
+#david .person-arm.person-arm-l {
+    -webkit-animation: davidRARM 10s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+    background-image: url('pic/silly.Larm.png');
+    z-index: 200;
+
+}
+#david .person-arm {
+    width: 10px;
+    height: 60px;
+    position: absolute;
+    top: 80%;
+}
+
+#david .person-arm.person-arm-r {
+    -webkit-animation: davidLARM 10s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+    background-image: url('pic/silly.Rarm.png');
+    z-index: 200;
+}
+
+#david .person-leg {
+    position: absolute;
+    top: 130%;
+}
+
+#david .person-leg.person-leg-l {
+    -webkit-animation: davidRLEG 5s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+    left: 5%;
+    width: 30px;
+    background-image: url('pic/silly.Lleg2.png');
+}
+#david .person-leg.person-leg-r {
+    -webkit-animation: davidLLEG 5s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+    right: 5%;
+    width: 30px;
+    background-image: url('pic/silly.Rleg2.png');
+}
+
+
+
+@-webkit-keyframes davidLARM {
+    0%   {-webkit-transform: rotate(0deg);}
+    5%  {-webkit-transform: rotate(-170deg);}
+    95%  {-webkit-transform: rotate(-160deg);}
+    100% {-webkit-transform: rotate(0deg);}
+}
+@-webkit-keyframes davidRARM {
+    0%   {-webkit-transform: rotate(0deg);}
+    5%  {-webkit-transform: rotate(170deg);}
+    95%  {-webkit-transform: rotate(160deg);}
+    100% {-webkit-transform: rotate(0deg);}
+}
+
+@-webkit-keyframes davidRLEG {
+    0%   {-webkit-transform: rotate(0deg);}
+    5%  {-webkit-transform: rotate(20deg);}
+    15% {-webkit-transform: rotate(0deg);}
+    20%   {-webkit-transform: rotate(30deg);}
+    30%  {-webkit-transform: rotate(0deg);}
+    50% {-webkit-transform: rotate(20deg);}
+    65%   {-webkit-transform: rotate(0deg);}
+    75%  {-webkit-transform: rotate(40deg);}
+    85% {-webkit-transform: rotate(0deg);}
+    90%  {-webkit-transform: rotate(20deg);}
+    100% {-webkit-transform: rotate(0deg);}
+}
+
+@-webkit-keyframes davidLLEG {
+    0%   {-webkit-transform: rotate(0deg);}
+    5%  {-webkit-transform: rotate(-20deg);}
+    15% {-webkit-transform: rotate(0deg);}
+    20%   {-webkit-transform: rotate(-30deg);}
+    30%  {-webkit-transform: rotate(0deg);}
+    50% {-webkit-transform: rotate(-20deg);}
+    65%   {-webkit-transform: rotate(0deg);}
+    75%  {-webkit-transform: rotate(-40deg);}
+    85% {-webkit-transform: rotate(0deg);}
+    90%  {-webkit-transform: rotate(-20deg);}
+    100% {-webkit-transform: rotate(0deg);}
+}
+
+@-webkit-keyframes david {
+    0%   {}
+    5%   {top:0px;}
+    10%  {top:25px;}
+    20%  {top:0px;}
+    25%  {top:25px;}
+    35%  {top:-40px;}
+    45%  {top:50px;}
+    55%  {top:-50px;}
+    65%  {top:50px;}
+    70%  {top:0px;}
+    80%  {top:-60px;}
+    90%  {top:40px;}
+    95%  {top:0px;}
+}
+
+@-webkit-keyframes myOrbit {
+    from { -webkit-transform: rotate(0deg) translateX(75px) rotate(0deg); }
+    to   { -webkit-transform: rotate(360deg) translateX(75px) rotate(-360deg); }
+}
+
+@-moz-keyframes myOrbit {
+    from { -moz-transform: rotate(0deg) translateX(75px) rotate(0deg); }
+    to   { -moz-transform: rotate(360deg) translateX(75px) rotate(-360deg); }
+}
+
+@-o-keyframes myOrbit {
+    from { -o-transform: rotate(0deg) translateX(75px) rotate(0deg); }
+    to   { -o-transform: rotate(360deg) translateX(75px) rotate(-360deg); }
+}
+
+@keyframes myOrbit {
+    from { transform: rotate(0deg) translateX(75px) rotate(0deg); }
+    to   { transform: rotate(360deg) translateX(75px) rotate(-360deg); }
 }
