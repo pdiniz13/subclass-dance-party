@@ -2,11 +2,11 @@
 <html>
 <head>
   <title>Mocha Spec Runner</title>
-  <link rel="stylesheet" href="lib/mocha/mocha.css">
-  <script src="lib/jquery.js"></script>
-  <script src="lib/mocha/mocha.js"></script>
-  <script src="lib/chai/chai.js"></script>
-  <script src="lib/sinon/sinon.js"></script>
+  <link rel="stylesheet" href="public/lib/mocha/mocha.css">
+  <script src="public/lib/jquery.js"></script>
+  <script src="public/lib/mocha/mocha.js"></script>
+  <script src="public/lib/chai/chai.js"></script>
+  <script src="public/lib/sinon/sinon.js"></script>
   <script>
     mocha.setup('bdd');
     window.expect = chai.expect;
@@ -14,9 +14,9 @@
       window.mochaPhantomJS ? mochaPhantomJS.run() : mocha.run();
     });
   </script>
-  <script src="spec/blinkyDancerSpec.js"></script>
-  <script src="src/dancer.js"></script>
-  <script src="src/blinkyDancer.js"></script>
+  <script src="public/spec/blinkyDancerSpec.js"></script>
+  <script src="public/src/dancer.js"></script>
+  <script src="public/src/blinkyDancer.js"></script>
 </head>
 <body>
 <div id="mocha"></div>

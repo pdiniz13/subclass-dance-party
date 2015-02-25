@@ -16,3 +16,22 @@ makeBasicMovingDancer.prototype.step = function(){
   // See http://api.jquery.com/category/effects/ for this and
   // other effects you can use on a jQuery-wrapped html tag.
 };
+
+/**
+ * @param [string] hello
+ * @returns {*}
+ */
+var testFunc = function(hello){
+  return (hello);
+};
+
+
+testFunc(4);
+
+var x = 5;
+var x;
+
+var tomorrow = function(){
+  var x;
+  console.log(x);
+};

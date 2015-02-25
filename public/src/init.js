@@ -34,12 +34,12 @@ $(document).ready(function(){
     if (dancer.$node.attr('id') === "roll" || dancer.$node.attr('id') === undefined){
       $('.song2').get(0).pause();
       $('.song').get(0).play();
-      $("body").css({"background-image": 'url("pic/rick-astley-80s-hairstyle.jpg")'});
+      $("body").css({"background-image": 'url("public/pic/rick-astley-80s-hairstyle.jpg")'});
     }
     if (dancer.$node.attr('id') === "gangnam" || dancer.$node.attr('id') === "zhang"){
       $('.song').get(0).pause();
       $('.song2').get(0).play();
-      $("body").css({"background-image": 'url("pic/how-to-draw-psy-gangnam-style_1_000000013411_5.png")'});
+      $("body").css({"background-image": 'url("public/pic/how-to-draw-psy-gangnam-style_1_000000013411_5.png")'});
     }
 
   });
